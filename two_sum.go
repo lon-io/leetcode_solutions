@@ -8,15 +8,11 @@ func twoSum(nums []int, target int) []int {
     for i, num := range nums {
 
         if j, ok := numMap[num]; ok {
-            result = []int{j, i};
+            return []int{j, i};
         }
 
         var complement = target - num
         numMap[complement] = i
-
-        if (len(result) > 2) {
-            return result
-        }
     }
 
     return result
