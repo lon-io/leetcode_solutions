@@ -12,6 +12,13 @@ func lengthOfLongestSubstring(s string) int {
     for _, v := range s {
 		vStr := string(v)
 
+		// Slower
+		// split := strings.Split(current, vStr)
+        // if len(split) > 1 {
+		// 	fmt.Printf("\nFound %s, Resetting %s to: %s", vStr, current, split[1])
+        //     current = split[1]
+        // }
+
 		// Faster
         oldIndex := strings.Index(current, vStr)
         if oldIndex > -1 {
